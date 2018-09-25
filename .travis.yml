@@ -1,0 +1,33 @@
+---
+dist: trusty
+language: node_js
+sudo: false
+cache:
+  directories:
+    - node_modules # NPM packages
+
+env:
+  global:
+    - fast_finish: true
+
+services:
+  - docker
+
+addons:
+  apt:
+    sources:
+      - docker-trusty
+    packages:
+      - docker-ce
+
+install:
+  - npm install -g markdownlint-cli
+
+script:
+  - markdownlint --help
+  - markdownlint *.md
+
+notifications:
+  email:
+    on_failure: change
+    on_success: never
