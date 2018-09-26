@@ -16,6 +16,6 @@ Overview of the Intermax organizations and their open source repositories
 
 No opensource yet
 
-## True-xs
+## NFIR / True-xs
 
-No opensource yet
+<https://github.com/NFIR-TrueXS>
